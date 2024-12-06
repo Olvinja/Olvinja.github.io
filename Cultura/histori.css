@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@400&display=swap');
+}
+
+/* Estilo de "JUTICALPA" */
+.juticalpa {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0077b6; /* Azul elegante */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: slideIn 1.2s ease-out; /* Animación personalizada */
+    margin: 4 auto;
+    text-align:center;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #fdfcf3, #f2f7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilo contenedor principal con bordes innovadores */
+.story-wrapper {
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 20px; /* Bordes más redondeados para un toque moderno */
+    background: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 90vh;
+    animation: fade-in-container 1.5s ease-out;
+    border: 2px solid #90caf9; /* Borde sutil con color azul */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.story-wrapper:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Efecto de sombra al pasar el mouse */
+    border-color: #91bee9; /* Cambia de color el borde al hacer hover */
+}
+
+/* Estilo contenedor del título */
+.story-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #1e88e5;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fade-in 1.5s forwards;
+}
+
+/* Sección de la historia */
+.story-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e3f2fd; /* Añadir borde inferior sutil */
+    padding-bottom: 15px;
+}
+
+.story-section.alternate {
+    flex-direction: row-reverse;
+}
+
+.story-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #37474f;
+    flex: 1;
+    padding: 0 20px;
+    text-align: justify;
+    opacity: 0;
+    animation: slide-up 1.5s ease-out 0.5s forwards;
+}
+
+.story-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px; /* Bordes más redondeados */
+    border: 3px solid #90caf9; /* Borde más grueso y visible */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoom-in 1.5s ease-out forwards;
+}
+
+/* Contenedor de texto animado */
+.animated-text-container {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.animated-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #f06292;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: text-glow 2s ease-out forwards, color-change 3s ease-in-out infinite;
+}
+
+/* ANIMACIONES */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in-container {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes text-glow {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes color-change {
+    0%, 100% {
+        color: #f06292;
+    }
+    50% {
+        color: #5c1fec;
+    }
+}
+
+/* SCROLLBAR PERSONALIZADO */
+.story-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.story-wrapper::-webkit-scrollbar-thumb {
+    background-color: #90caf9;
+    border-radius: 5px;
+}
+
+.story-wrapper::-webkit-scrollbar-track {
+    background: #e3f2fd;
+}
+

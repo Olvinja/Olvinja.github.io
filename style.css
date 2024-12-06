@@ -1,0 +1,212 @@
+/* Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15%; /* Ajustar el espaciado lateral para centrado */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+    backdrop-filter: blur(10px); /* Desenfoque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo de "JUTICALPA" */
+.juticalpa {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0077b6; /* Azul elegante */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: slideIn 1.2s ease-out; /* Animación personalizada */
+    margin: 4 auto;
+    text-align:center;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo del menú */
+nav {
+    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    align-items: center;
+    gap: 30px; /* Espaciado entre elementos */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333; /* Texto negro */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a:hover {
+    color: #0077b6; /* Azul elegante */
+    transform: scale(1.1); /* Pequeño zoom */
+}
+
+/* Efecto de subrayado animado */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0077b6;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Submenús */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    flex-direction: row;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+nav ul li:hover > ul {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* Estilo de los cuadros */
+.cuadros {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.cuadro {
+    width: 250px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #90caf9;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: cuadro-animado 1s forwards;
+}
+
+.cuadro:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.cuadro:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.cuadro:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.cuadro h3 {
+    font-size: 1.5rem;
+    color: #1e88e5;
+    margin-bottom: 15px;
+}
+
+.cuadro p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Animaciones */
+@keyframes cuadro-animado {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}

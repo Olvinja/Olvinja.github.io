@@ -1,0 +1,199 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #1f8a70, #bedbbb);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInHeader 1s ease-out;
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenido Principal */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeInContent 1.5s ease-out;
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 60px;
+    animation: fadeInSection 2s ease-out;
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #1f8a70;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: capitalize;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #1f8a70;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Imagenes de Platillos */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.dish {
+    text-align: center;
+    max-width: 300px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dish h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #444;
+}
+
+.dish img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dish img:hover {
+    transform: scale(1.1);
+}
+
+/* Pie de Página */
+footer {
+    background: linear-gradient(90deg, #1f8a70, #bedbbb);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 0.9rem;
+    animation: fadeInFooter 1.5s ease-in-out;
+}
+
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .dish {
+        max-width: 100%;
+    }
+}

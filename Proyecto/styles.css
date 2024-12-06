@@ -1,0 +1,103 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #3f72af;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0; /* Para animación */
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+section img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 15px;
+}
+
+.content h2 {
+    color: #3f72af;
+    margin: 0;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+.content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3f72af;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.content a:hover {
+    background-color: #2d5a8a;
+}
+
+/* Footer */
+footer {
+    background-color: #112d4e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+section:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+section:nth-child(3) {
+    animation-delay: 0.6s;
+}
